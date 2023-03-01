@@ -26,4 +26,21 @@ public class Measurement {
     @Column
     private double ic;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "equipment_id")
+    private Equipment equipment;
+
+
+    @Override
+    public String toString() {
+        return "Measurement{" +
+                "id=" + id +
+                ", ua=" + ua +
+                ", ub=" + ub +
+                ", uc=" + uc +
+                ", ia=" + ia +
+                ", ib=" + ib +
+                ", ic=" + ic +
+                '}';
+    }
 }

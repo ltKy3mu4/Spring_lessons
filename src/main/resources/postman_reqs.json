@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "f5087927-3e42-4491-9e94-a2893a79eb5f",
+		"name": "Java spring les",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add new sample",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"substationId\":\"Gribovo\",\r\n    \"equipmentId\":\"Trans_1\",\r\n    \"point\":\"VN\",\r\n    \"ua\":220.3,\r\n    \"ub\":221.3,\r\n    \"uc\":219.8,\r\n    \"ia\":5.1,\r\n    \"ib\":4.8,\r\n    \"ic\":5.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/data/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"data",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find bad equipemnt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9005/equipment/get-bad-items?ssId=Gribovo",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"equipment",
+						"get-bad-items"
+					],
+					"query": [
+						{
+							"key": "ssId",
+							"value": "Gribovo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save measurment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":0,\r\n    \"ua\":10,\r\n    \"ub\":10,\r\n    \"uc\":10,\r\n    \"ia\":10,\r\n    \"ib\":10,\r\n    \"ic\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/measurement/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"measurement",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save equipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Trans500/220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/equipment/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"equipment",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9005/measurement/get?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"measurement",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find equipment by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9005/equipment/getById?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"equipment",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete measurement",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9005/measurement/delete?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"measurement",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get m List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
