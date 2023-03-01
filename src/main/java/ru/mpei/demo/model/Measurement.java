@@ -1,5 +1,6 @@
 package ru.mpei.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Measurement {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "equipment_id")
+    @JsonIgnore
     private Equipment equipment;
 
 
