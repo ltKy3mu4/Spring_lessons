@@ -27,7 +27,7 @@ public class Measurement {
     @Column
     private double ic;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipment_id")
     @JsonIgnore
     private Equipment equipment;
